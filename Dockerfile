@@ -6,7 +6,7 @@ ENV DOCKER_HOST unix:///tmp/docker.sock
 
 ADD https://releases.hashicorp.com/consul-template/${CONSUL_TEMPLATE_VERSION}/consul-template_${CONSUL_TEMPLATE_VERSION}_SHA256SUMS /tmp/
 ADD https://releases.hashicorp.com/consul-template/${CONSUL_TEMPLATE_VERSION}/consul-template_${CONSUL_TEMPLATE_VERSION}_linux_amd64.zip /tmp/
-
+# TEST
 RUN cd /tmp && \ 
     sha256sum -c consul-template_${CONSUL_TEMPLATE_VERSION}_SHA256SUMS 2>&1 | grep OK && \
     unzip consul-template_${CONSUL_TEMPLATE_VERSION}_linux_amd64.zip && \ 
